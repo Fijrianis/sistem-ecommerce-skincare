@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fidéa Glow &amp; Co — Premium Skincare Indonesia</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Toko skincare online terpercaya. Produk original dari SKIN 1004, SK-II, COSRX, Anua, La Roche-Posay &amp; 40+ brand ternama. Harga terbaik, pengiriman cepat." />
+  <meta name="keywords" content="skincare, serum, moisturizer, sunscreen, cleanser, toner, masker wajah, skincare original, toko skincare online" />
+  <meta name="author" content="Fidéa Glow &amp; Co" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://fidea-glow.com/" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://fidea-glow.com/" />
+  <meta property="og:title" content="Fidéa Glow &amp; Co — Premium Skincare Indonesia" />
+  <meta property="og:description" content="Produk skincare original dari 40+ brand ternama dunia. Harga terbaik, garansi keaslian, pengiriman cepat ke seluruh Indonesia." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=1200&q=80" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Fidéa Glow &amp; Co — Premium Skincare" />
+  <meta name="twitter:description" content="Produk skincare original dari 40+ brand ternama dunia." />
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=1200&q=80" />
+
+  <!-- Favicon menggunakan logo SVG -->
+  <link rel="icon" href="logo.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="logo.svg" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    tailwind.config = {
+      theme: { extend: { fontFamily: { playfair: ['Playfair Display','serif'], inter: ['Inter','sans-serif'] } } }
+    };
+  </script>
+</head>
+<body class="font-inter bg-[#fdf6f0] text-gray-800">
+
+  <!-- ======== NAVBAR ======== -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/80 backdrop-blur-md shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 md:h-20">
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-1.5">
+          <svg width="36" height="30" viewBox="0 0 44 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="tlg" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#f43f5e"/>
+                <stop offset="100%" stop-color="#fda4af"/>
+              </linearGradient>
+            </defs>
+            <!-- Kelopak tengah — paling lancip/tinggi -->
+            <path d="M22 28 C20 22 18 14 20 7 C21 3 22 1 22 1 C22 1 23 3 24 7 C26 14 24 22 22 28Z"
+              stroke="url(#tlg)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <!-- Kelopak kiri — lebih pendek, melebar -->
+            <path d="M22 28 C19 24 15 19 13 13 C12 9 13 6 15 6 C17 6 18 10 18.5 14 C19.5 19 21 24 22 28Z"
+              stroke="url(#tlg)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <!-- Kelopak kanan — lebih pendek, melebar -->
+            <path d="M22 28 C25 24 29 19 31 13 C32 9 31 6 29 6 C27 6 26 10 25.5 14 C24.5 19 23 24 22 28Z"
+              stroke="url(#tlg)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          </svg>
+          <span class="font-playfair text-2xl font-bold text-rose-600 tracking-wide">Fidéa Glow &amp; Co</span>
+        </a>
+
+        <!-- Desktop Nav -->
+        <div class="hidden md:flex items-center gap-8">
+          <a href="#home"       class="text-sm font-medium text-gray-600 hover:text-rose-500 transition-colors">Home</a>
+          <a href="#products"   class="text-sm font-medium text-gray-600 hover:text-rose-500 transition-colors">Products</a>
+          <a href="#categories" class="text-sm font-medium text-gray-600 hover:text-rose-500 transition-colors">Categories</a>
+          <a href="#about"      class="text-sm font-medium text-gray-600 hover:text-rose-500 transition-colors">About</a>
+        </div>
+
+        <!-- Right Actions -->
+        <div class="flex items-center gap-2">
+          <button id="searchToggle" class="p-2 rounded-full hover:bg-rose-50 transition-colors text-gray-600 hover:text-rose-500">
+            <i class="fas fa-search"></i>
+          </button>
+          <button id="cartBtn" class="relative p-2 rounded-full hover:bg-rose-50 transition-colors text-gray-600 hover:text-rose-500">
+            <i class="fas fa-shopping-bag text-lg"></i>
+            <span id="cartCount" class="absolute -top-1 -right-1 bg-rose-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center font-bold">0</span>
+          </button>
+
+          <!-- Guest: Login button — disembunyikan via JS saat login -->
+          <button id="authBtn" onclick="openAuthModal('login')"
+            class="md:flex items-center gap-1.5 px-4 py-2 bg-rose-500 hover:bg-rose-600 text-white text-sm font-semibold rounded-full transition-all"
+            style="display:none">
+            <i class="fas fa-user text-xs"></i> Login
+          </button>
+
+          <!-- Logged in: User menu -->
+          <div id="userMenu" class="relative hidden">
+            <button id="userMenuBtn" onclick="document.getElementById('userDropdown').classList.toggle('hidden')"
+              class="flex items-center gap-2 px-3 py-2 bg-rose-50 hover:bg-rose-100 rounded-full transition-all text-sm font-semibold text-rose-600">
+              <i class="fas fa-user-circle text-lg"></i>
+              <span id="userName" class="hidden md:inline"></span>
+              <i class="fas fa-chevron-down text-xs"></i>
+            </button>
+            <div id="userDropdown" class="hidden absolute right-0 top-12 bg-white rounded-2xl shadow-xl border border-rose-50 py-2 w-48 z-50">
+              <!-- Link Admin Panel — hanya muncul kalau role admin -->
+              <a id="adminPanelLink" href="admin_panel.php"
+                class="items-center gap-2 px-4 py-2.5 text-sm text-rose-600 font-semibold hover:bg-rose-50 bg-rose-50/50 border-b border-rose-100"
+                style="display:none">
+                <i class="fas fa-shield-alt w-4"></i> Admin Panel
+              </a>
+              <a href="#" onclick="openProfileModal(); closeUserDropdown(); return false;" id="menuProfil" class="flex items-center gap-2 px-4 py-2.5 text-sm text-gray-600 hover:text-rose-500 hover:bg-rose-50">
+                <i class="fas fa-user-edit w-4"></i> Profil Saya
+              </a>
+              <a href="#" onclick="openOrderHistory(); closeUserDropdown(); return false;" id="menuPesanan" class="flex items-center gap-2 px-4 py-2.5 text-sm text-gray-600 hover:text-rose-500 hover:bg-rose-50">
+                <i class="fas fa-box w-4"></i> Pesanan Saya
+              </a>
+              <a href="#" onclick="openWishlistModal(); closeUserDropdown(); return false;" id="menuWishlist" class="flex items-center gap-2 px-4 py-2.5 text-sm text-gray-600 hover:text-rose-500 hover:bg-rose-50">
+                <i class="fas fa-heart w-4"></i> Wishlist
+              </a>
+              <hr class="my-1 border-rose-50" />
+              <button onclick="logout()" class="w-full flex items-center gap-2 px-4 py-2.5 text-sm text-red-400 hover:text-red-600 hover:bg-red-50">
+                <i class="fas fa-sign-out-alt w-4"></i> Logout
+              </button>
+            </div>
+          </div>
+
+          <button id="mobileMenuBtn" class="md:hidden p-2 rounded-full hover:bg-rose-50 text-gray-600">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Search Bar -->
+      <div id="searchBar" class="hidden pb-4">
+        <div class="relative">
+          <input id="searchInput" type="text" placeholder="Cari produk skincare..."
+            class="w-full px-5 py-3 pr-12 rounded-full border border-rose-200 bg-white focus:outline-none focus:ring-2 focus:ring-rose-300 text-sm shadow-sm" />
+          <i class="fas fa-search absolute right-4 top-1/2 -translate-y-1/2 text-rose-400"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-rose-100 shadow-lg">
+      <div class="px-4 py-4 space-y-3">
+        <a href="#home"       class="block py-2 text-sm font-medium text-gray-700 hover:text-rose-500">Home</a>
+        <a href="#products"   class="block py-2 text-sm font-medium text-gray-700 hover:text-rose-500">Products</a>
+        <a href="#categories" class="block py-2 text-sm font-medium text-gray-700 hover:text-rose-500">Categories</a>
+        <a href="#about"      class="block py-2 text-sm font-medium text-gray-700 hover:text-rose-500">About</a>
+        <button onclick="openAuthModal('login')" class="w-full text-left py-2 text-sm font-medium text-rose-500 hover:text-rose-600">
+          <i class="fas fa-user mr-2"></i>Login / Daftar
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ======== HERO ======== -->
+  <section id="home" class="hero-section min-h-screen flex items-center relative overflow-hidden pt-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+      <div class="grid md:grid-cols-2 gap-12 items-center py-16">
+        <div class="text-center md:text-left">
+          <span class="inline-block bg-rose-100 text-rose-600 text-xs font-semibold px-4 py-1.5 rounded-full mb-5 tracking-widest uppercase">✨ Premium Skincare</span>
+          <h1 class="font-playfair text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-gray-900 mb-6">
+            Glowing Skin<br/><span class="text-gradient">Starts Here</span>
+          </h1>
+          <p class="text-gray-500 text-lg leading-relaxed mb-8 max-w-md">
+            Temukan produk skincare dari brand-brand ternama dunia, dikurasi khusus untuk merawat kulitmu agar selalu sehat, cerah, dan bercahaya.
+          </p>
+          <div class="flex flex-wrap gap-4 justify-center md:justify-start">
+            <a href="#products" class="btn-primary px-8 py-4 rounded-full text-white font-semibold text-sm shadow-lg">
+              <i class="fas fa-shopping-bag mr-2"></i>Shop Now
+            </a>
+            <a href="#about" class="px-8 py-4 rounded-full border-2 border-rose-300 text-rose-600 font-semibold text-sm hover:bg-rose-50 transition-all">
+              Learn More <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+          <div class="mt-10 flex gap-8 justify-center md:justify-start">
+            <div class="text-center"><div class="font-playfair text-3xl font-bold text-gray-900">50+</div><div class="text-xs text-gray-400 mt-1">Products</div></div>
+            <div class="w-px bg-rose-200"></div>
+            <div class="text-center"><div class="font-playfair text-3xl font-bold text-gray-900">10K+</div><div class="text-xs text-gray-400 mt-1">Customers</div></div>
+            <div class="w-px bg-rose-200"></div>
+            <div class="text-center"><div class="font-playfair text-3xl font-bold text-gray-900">4.9★</div><div class="text-xs text-gray-400 mt-1">Rating</div></div>
+          </div>
+        </div>
+        <div class="hidden md:flex justify-center">
+          <div class="relative">
+            <div class="hero-blob absolute inset-0"></div>
+            <img src="index.png" alt="Skincare"
+              class="relative z-10 rounded-3xl shadow-2xl w-80 lg:w-96 hero-img" />
+            <div class="float-badge badge-1 bg-white rounded-2xl px-4 py-2.5 shadow-lg flex items-center gap-2 absolute -left-6 bottom-16 z-20">
+              <i class="fas fa-certificate text-green-500"></i>
+              <span class="text-xs font-semibold text-gray-700">100% Original</span>
+            </div>
+            <div class="float-badge badge-2 bg-white rounded-2xl px-4 py-2.5 shadow-lg flex items-center gap-2 absolute -right-6 top-16 z-20">
+              <i class="fas fa-star text-yellow-400"></i>
+              <span class="text-xs font-semibold text-gray-700">Top Rated</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="wave-bottom absolute bottom-0 left-0 right-0 leading-none">
+      <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,30 C360,60 1080,0 1440,30 L1440,60 L0,60 Z" fill="#fff"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ======== WHY CHOOSE US ======== --> 
+<section class="py-14 bg-white"> 
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> 
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6"> 
+      
+      <div class="feature-card p-6 rounded-2xl text-center"> 
+        <div class="feature-icon w-14 h-14 mx-auto mb-4 rounded-2xl flex items-center justify-center bg-green-50"> 
+          <i class="fas fa-certificate text-xl text-green-500"></i> 
+        </div> 
+        <h4 class="font-semibold text-gray-800 text-sm mb-1">100% Original</h4> 
+        <p class="text-gray-400 text-xs">Produk asli & bergaransi</p> 
+      </div> 
+
+      <div class="feature-card p-6 rounded-2xl text-center"> 
+        <div class="feature-icon w-14 h-14 mx-auto mb-4 rounded-2xl flex items-center justify-center bg-blue-50"> 
+          <i class="fas fa-tags text-xl text-blue-500"></i> 
+        </div> 
+        <h4 class="font-semibold text-gray-800 text-sm mb-1">Harga Terbaik</h4> 
+        <p class="text-gray-400 text-xs">Kompetitif & transparan</p> 
+      </div> 
+
+      <div class="feature-card p-6 rounded-2xl text-center"> 
+  <div class="feature-icon w-14 h-14 mx-auto mb-4 rounded-2xl flex items-center justify-center bg-rose-50"> 
+    <i class="fas fa-truck text-xl text-rose-500"></i> 
+  </div> 
+  <h4 class="font-semibold text-gray-800 text-sm mb-1">Pengiriman Cepat</h4> 
+  <p class="text-gray-400 text-xs">Pengiriman aman & cepat</p> 
+</div>
+
+      <div class="feature-card p-6 rounded-2xl text-center"> 
+        <div class="feature-icon w-14 h-14 mx-auto mb-4 rounded-2xl flex items-center justify-center bg-purple-50"> 
+          <i class="fas fa-shield-alt text-xl text-purple-500"></i> 
+        </div> 
+        <h4 class="font-semibold text-gray-800 text-sm mb-1">Aman & Terpercaya</h4> 
+        <p class="text-gray-400 text-xs">Belanja dengan nyaman</p> 
+      </div> 
+
+    </div> 
+  </div> 
+</section>
+  <!-- ======== CATEGORIES ======== -->
+  <section id="categories" class="py-14 bg-[#fdf6f0]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10">
+        <span class="pill-tag">Categories</span>
+        <h2 class="font-playfair text-3xl md:text-4xl font-bold text-gray-900 mt-3">Browse by Category</h2>
+        <p class="text-gray-400 mt-2 text-sm">Pilih produk sesuai kebutuhan kulitmu</p>
+      </div>
+      <div class="flex flex-wrap gap-3 justify-center" id="categoryFilters">
+        <button class="filter-btn active" data-filter="all"><i class="fas fa-th mr-2"></i>Semua</button>
+        <button class="filter-btn" data-filter="serum"><i class="fas fa-tint mr-2"></i>Serum</button>
+        <button class="filter-btn" data-filter="moisturizer"><i class="fas fa-droplet mr-2"></i>Moisturizer</button>
+        <button class="filter-btn" data-filter="cleanser"><i class="fas fa-soap mr-2"></i>Cleanser</button>
+        <button class="filter-btn" data-filter="sunscreen"><i class="fas fa-sun mr-2"></i>Sunscreen</button>
+        <button class="filter-btn" data-filter="toner"><i class="fas fa-flask mr-2"></i>Toner</button>
+        <button class="filter-btn" data-filter="mask"><i class="fas fa-spa mr-2"></i>Mask</button>
+        <button class="filter-btn" data-filter="eye-cream"><i class="fas fa-eye mr-2"></i>Eye Cream</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== PRODUCTS ======== -->
+  <section id="products" class="pb-20 bg-[#fdf6f0]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between mb-6">
+        <p class="text-sm text-gray-400"><span id="productCount">0</span> produk ditemukan</p>
+        <select id="sortSelect" class="text-sm border border-rose-200 rounded-full px-4 py-2 bg-white focus:outline-none focus:ring-2 focus:ring-rose-200 cursor-pointer text-gray-600">
+          <option value="default">Featured</option>
+          <option value="price-low">Harga Terendah</option>
+          <option value="price-high">Harga Tertinggi</option>
+          <option value="rating">Top Rated</option>
+          <option value="newest">Terbaru</option>
+        </select>
+      </div>
+      <div id="productGrid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-5">
+        <!-- Loading skeleton -->
+        <div class="product-card animate-pulse"><div class="h-48 bg-rose-100 rounded-2xl mb-3"></div><div class="h-3 bg-rose-100 rounded mb-2"></div><div class="h-3 bg-rose-50 rounded w-3/4"></div></div>
+        <div class="product-card animate-pulse"><div class="h-48 bg-rose-100 rounded-2xl mb-3"></div><div class="h-3 bg-rose-100 rounded mb-2"></div><div class="h-3 bg-rose-50 rounded w-3/4"></div></div>
+        <div class="product-card animate-pulse hidden sm:block"><div class="h-48 bg-rose-100 rounded-2xl mb-3"></div><div class="h-3 bg-rose-100 rounded mb-2"></div><div class="h-3 bg-rose-50 rounded w-3/4"></div></div>
+        <div class="product-card animate-pulse hidden md:block"><div class="h-48 bg-rose-100 rounded-2xl mb-3"></div><div class="h-3 bg-rose-100 rounded mb-2"></div><div class="h-3 bg-rose-50 rounded w-3/4"></div></div>
+        <div class="product-card animate-pulse hidden lg:block"><div class="h-48 bg-rose-100 rounded-2xl mb-3"></div><div class="h-3 bg-rose-100 rounded mb-2"></div><div class="h-3 bg-rose-50 rounded w-3/4"></div></div>
+      </div>
+      <div id="noResults" class="hidden text-center py-20">
+        <div class="text-6xl mb-4">🔍</div>
+        <h3 class="font-playfair text-xl font-semibold text-gray-600">Produk tidak ditemukan</h3>
+        <p class="text-gray-400 text-sm mt-2">Coba kata kunci atau kategori lain</p>
+      </div>
+      <!-- Pagination -->
+      <div id="productPagination" class="flex items-center justify-center gap-2 mt-8 flex-wrap"></div>
+    </div>
+  </section>
+
+  <!-- ======== PROMO BANNER ======== -->
+  <section id="promoBanner" class="promo-banner py-16 relative overflow-hidden">
+    <div class="max-w-3xl mx-auto px-4 text-center relative z-10">
+      <span class="inline-block bg-white/20 text-white text-xs font-semibold px-4 py-1.5 rounded-full mb-4 tracking-widest uppercase">🎁 Welcome Offer</span>
+      <h2 class="font-playfair text-3xl md:text-5xl font-bold text-white mb-4">Hadiah Spesial untuk Pelanggan Baru</h2>
+      <p class="text-white/80 text-base mb-3">Daftar sekarang dan dapatkan voucher diskon</p>
+      <div class="inline-flex items-center gap-3 bg-white/15 backdrop-blur-sm border border-white/30 rounded-2xl px-6 py-3 mb-8">
+        <div class="text-left">
+          <p class="text-white/70 text-xs uppercase tracking-widest">Voucher Pelanggan Baru</p>
+          <p class="text-white font-bold text-xl">Rp 20.000 OFF</p>
+        </div>
+        <div class="w-px h-10 bg-white/30"></div>
+        <div class="text-left">
+          <p class="text-white/70 text-xs">Tanpa minimum pembelian</p>
+          <p class="text-white/70 text-xs">Berlaku 30 hari setelah daftar</p>
+        </div>
+      </div>
+      <br/>
+      <button onclick="openAuthModal('register')"
+        class="inline-block bg-white text-rose-600 font-bold px-10 py-4 rounded-full shadow-lg hover:shadow-xl transition-all hover:-translate-y-0.5 text-sm">
+        Daftar Sekarang <i class="fas fa-arrow-right ml-2"></i>
+      </button>
+    </div>
+  </section>
+
+  <!-- ======== ABOUT ======== -->
+  <section id="about" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-16 items-center">
+        <div>
+          <span class="pill-tag">About Us</span>
+          <h2 class="font-playfair text-3xl md:text-4xl font-bold text-gray-900 mt-3 mb-5">Satu Tempat untuk<br/>Semua Skincare-mu</h2>
+          <p class="text-gray-500 text-sm leading-relaxed mb-4">Fidéa Glow &amp; Co adalah toko skincare yang menghadirkan produk dari brand-brand ternama dunia — mulai dari The Skin 1004, SK-II, COSRX, hingga La Roche-Posay — dalam satu tempat yang mudah dan terpercaya.</p>
+          <p class="text-gray-500 text-sm leading-relaxed mb-8">Kami memilih setiap produk dengan cermat, memastikan keasliannya, dan menghadirkannya ke tanganmu dengan harga yang kompetitif. Karena merawat kulit tidak harus ribet.</p>
+          <div class="grid grid-cols-3 gap-4">
+            <div class="text-center p-4 bg-rose-50 rounded-2xl"><div class="font-playfair text-2xl font-bold text-rose-600">5+</div><div class="text-xs text-gray-500 mt-1">Tahun Berdiri</div></div>
+            <div class="text-center p-4 bg-rose-50 rounded-2xl"><div class="font-playfair text-2xl font-bold text-rose-600">50+</div><div class="text-xs text-gray-500 mt-1">Produk</div></div>
+            <div class="text-center p-4 bg-rose-50 rounded-2xl"><div class="font-playfair text-2xl font-bold text-rose-600">10K+</div><div class="text-xs text-gray-500 mt-1">Pelanggan</div></div>
+          </div>
+        </div>
+        <div class="relative">
+          <img src="https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?w=600&q=80" alt="About GlowSkin"
+            class="rounded-3xl shadow-xl w-full object-cover h-80 md:h-96" />
+          <div class="absolute -bottom-6 -left-6 bg-white rounded-2xl p-5 shadow-xl hidden md:block">
+            <div class="flex items-center gap-3">
+              <div class="w-12 h-12 rounded-full bg-rose-100 flex items-center justify-center">
+                <i class="fas fa-award text-rose-500 text-xl"></i>
+              </div>
+              <div>
+                <div class="font-bold text-gray-800 text-sm">Trusted Skincare Store</div>
+                <div class="text-gray-400 text-xs">Verified Reseller 2024</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== FOOTER ======== -->
+<footer class="footer-bg py-12">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-10">
+
+      <!-- BRAND -->
+      <div>
+        <div class="flex items-center gap-2 mb-4">
+          <span class="text-2xl">🌸</span>
+          <span class="font-playfair text-2xl font-bold text-white">
+            Fidéa Glow &amp; Co
+          </span>
+        </div>
+
+        <p class="text-white/50 text-sm leading-relaxed">
+          Toko skincare terpercaya dengan produk original dari brand-brand ternama dunia.
+        </p>
+
+        <!-- SOSIAL MEDIA -->
+        <div class="flex gap-3 mt-5">
+
+          <a
+            href="https://www.instagram.com/fideaglownco.id"
+            target="_blank"
+            class="w-9 h-9 rounded-full bg-white/10 hover:bg-rose-500 flex items-center justify-center transition-colors text-white/70 hover:text-white"
+          >
+            <i class="fab fa-instagram text-sm"></i>
+          </a>
+
+          <a
+            href="https://www.tiktok.com/"
+            target="_blank"
+            class="w-9 h-9 rounded-full bg-white/10 hover:bg-rose-500 flex items-center justify-center transition-colors text-white/70 hover:text-white"
+          >
+            <i class="fab fa-tiktok text-sm"></i>
+          </a>
+
+          <a
+            href="https://www.facebook.com/"
+            target="_blank"
+            class="w-9 h-9 rounded-full bg-white/10 hover:bg-rose-500 flex items-center justify-center transition-colors text-white/70 hover:text-white"
+          >
+            <i class="fab fa-facebook text-sm"></i>
+          </a>
+
+        </div>
+      </div>
+
+
+      <!-- PRODUK -->
+      <div>
+  <h4 class="text-white font-semibold text-sm uppercase tracking-wider mb-4">Produk</h4>
+  <ul class="space-y-2 text-white/50 text-sm">
+    <li>Serum</li>
+    <li>Moisturizer</li>
+    <li>Cleanser</li>
+    <li>Sunscreen</li>
+  </ul>
+</div>
+<div>
+  <h4 class="text-white font-semibold text-sm uppercase tracking-wider mb-4">
+    Pembayaran
+  </h4>
+
+  <div class="flex flex-wrap gap-2">
+    <span class="bg-white/10 px-3 py-2 rounded-lg text-white/70 text-sm">
+      🏦 Transfer
+    </span>
+
+    <span class="bg-white/10 px-3 py-2 rounded-lg text-white/70 text-sm">
+      🔳 QRIS
+    </span>
+
+    <span class="bg-white/10 px-3 py-2 rounded-lg text-white/70 text-sm">
+      🏠 COD
+    </span>
+  </div>
+
+  <p class="text-white/40 text-xs mt-4">
+    Pembayaran aman dan terpercaya.
+  </p>
+</div>
+      <div>
+  <h4 class="text-white font-semibold text-sm uppercase tracking-wider mb-4">
+    Kontak
+  </h4>
+
+  <ul class="space-y-3 text-white/50 text-sm">
+    <li class="flex items-center gap-3">
+      <i class="fab fa-whatsapp text-green-400"></i>
+      <a href="https://wa.me/6281511735040" target="_blank"
+        class="hover:text-green-400 transition-colors">
+        081511735040
+      </a>
+    </li>
+    <li class="flex items-center gap-3">
+      <i class="fas fa-envelope text-rose-400"></i>
+      <span>fideaglow@gmail.com</span>
+    </li>
+    <li class="flex items-start gap-3">
+      <i class="fas fa-map-marker-alt text-rose-400 mt-1 flex-shrink-0"></i>
+      <span class="leading-relaxed">Jl. Raya Puspiptek No. 46, Buaran, Kec. Pamulang, Kota Tangerang Selatan, Banten</span>
+    </li>
+  </ul>
+</div>
+      </div>
+
+    </div>
+
+
+    <!-- COPYRIGHT -->
+    <div class="border-t border-white/10 pt-6 text-center">
+
+      <p class="text-white/30 text-xs">
+        © 2024 Fidéa Glow &amp; Co. All rights reserved.
+        Made with <span class="text-rose-400">❤️</span>
+      </p>
+
+    </div>
+
+  </div>
+</footer>
+
+  <!-- ======== WISHLIST MODAL ======== -->
+  <div id="wishlistOverlay" class="fixed inset-0 bg-black/60 z-[60] hidden backdrop-blur-sm items-center justify-center p-4">
+    <div class="bg-white rounded-3xl shadow-2xl w-full max-w-2xl max-h-[90vh] flex flex-col overflow-hidden">
+      <div class="flex items-center justify-between p-6 border-b border-gray-100 flex-shrink-0">
+        <h3 class="font-playfair text-xl font-bold text-gray-900">
+          <i class="fas fa-heart text-rose-400 mr-2"></i>Wishlist Saya
+        </h3>
+        <button onclick="closeWishlistModal()" class="p-2 rounded-full hover:bg-rose-50 text-gray-400 hover:text-rose-500 transition-colors">
+          <i class="fas fa-times text-lg"></i>
+        </button>
+      </div>
+      <div id="wishlistContent" class="flex-1 overflow-y-auto p-6">
+        <div class="text-center py-12 text-gray-300">
+          <i class="fas fa-spinner fa-spin text-3xl mb-3 block"></i>
+          <p class="text-sm">Memuat wishlist...</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======== PROFILE MODAL ======== -->
+  <div id="profileOverlay" class="fixed inset-0 bg-black/60 z-[60] hidden backdrop-blur-sm items-center justify-center p-4">
+    <div class="bg-white rounded-3xl shadow-2xl w-full max-w-md overflow-hidden">
+      <!-- Tabs -->
+      <div class="flex border-b border-gray-100">
+        <button id="tabProfileInfo" onclick="switchProfileTab('info')"
+          class="profile-tab-active flex-1 py-4 text-sm font-semibold transition-all border-b-2 border-rose-500 text-rose-600">
+          <i class="fas fa-user mr-2"></i>Data Diri
+        </button>
+        <button id="tabProfilePwd" onclick="switchProfileTab('password')"
+          class="flex-1 py-4 text-sm font-semibold text-gray-400 hover:text-rose-500 transition-all border-b-2 border-transparent">
+          <i class="fas fa-lock mr-2"></i>Password
+        </button>
+        <button
+  type="button"
+  onclick="document.getElementById('orderDetailUserOverlay').classList.add('hidden'); document.getElementById('orderDetailUserOverlay').classList.remove('flex'); document.body.style.overflow='';"
+  class="w-10 h-10 rounded-full bg-rose-50 text-rose-500 hover:bg-rose-100 transition-all flex items-center justify-center">
+  <i class="fas fa-times text-xl"></i>
+</button>
+      </div>
+
+      <!-- Tab: Info -->
+      <form id="profileInfoForm" onsubmit="saveProfile(event)" class="p-7">
+        <div class="text-center mb-6">
+          <div class="w-16 h-16 rounded-full bg-gradient-to-br from-rose-400 to-pink-500 flex items-center justify-center mx-auto mb-3 shadow-lg">
+            <span id="profileAvatar" class="text-white font-bold text-2xl">A</span>
+          </div>
+          <p id="profileEmail" class="text-gray-400 text-xs"></p>
+          <p id="profileJoined" class="text-gray-300 text-xs mt-0.5"></p>
+        </div>
+        <div class="space-y-4">
+          <div>
+            <label class="block text-xs font-semibold text-gray-600 mb-1.5">Nama Lengkap <span class="text-red-400">*</span></label>
+            <input id="profileName" type="text" required placeholder="Nama lengkap kamu"
+              class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-rose-300 text-sm" />
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-gray-600 mb-1.5">No. Telepon</label>
+            <input id="profilePhone" type="tel" placeholder="08xxxxxxxxxx"
+              class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-rose-300 text-sm" />
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-gray-600 mb-1.5">Alamat Pengiriman Default</label>
+            <textarea id="profileAddress" rows="3" placeholder="Jl. ..., Kota, Provinsi, Kode Pos"
+              class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-rose-300 text-sm resize-none"></textarea>
+            <p class="text-xs text-gray-400 mt-1">Alamat ini akan otomatis terisi saat checkout</p>
+          </div>
+          <p id="profileInfoError" class="text-xs text-red-500 hidden"></p>
+          <button type="submit" id="profileSaveBtn"
+            class="w-full py-3.5 rounded-full bg-gradient-to-r from-rose-500 to-pink-500 text-white font-semibold text-sm hover:opacity-90 transition-all shadow-md">
+            <i class="fas fa-save mr-2"></i>Simpan Perubahan
+          </button>
+        </div>
+      </form>
+
+      <!-- Tab: Password -->
+      <form id="profilePwdForm" onsubmit="changeProfilePassword(event)" class="p-7 hidden">
+        <div class="space-y-4">
+          <div>
+            <label class="block text-xs font-semibold text-gray-600 mb-1.5">Password Lama</label>
+            <input id="profileOldPwd" type="password" required placeholder="Password saat ini"
+              class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-rose-300 text-sm" />
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-gray-600 mb-1.5">Password Baru</label>
+            <input id="profileNewPwd" type="password" required placeholder="Min. 6 karakter"
+              class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-rose-300 text-sm" />
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-gray-600 mb-1.5">Konfirmasi Password Baru</label>
+            <input id="profileConfirmPwd" type="password" required placeholder="Ulangi password baru"
+              class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-rose-300 text-sm" />
+          </div>
+          <p id="profilePwdError" class="text-xs text-red-500 hidden"></p>
+          <p id="profilePwdSuccess" class="text-xs text-emerald-600 hidden"></p>
+          <button type="submit"
+            class="w-full py-3.5 rounded-full bg-gradient-to-r from-rose-500 to-pink-500 text-white font-semibold text-sm hover:opacity-90 transition-all shadow-md">
+            <i class="fas fa-key mr-2"></i>Ubah Password
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ======== ORDER HISTORY MODAL ======== -->
+  <div id="orderHistoryOverlay" class="fixed inset-0 bg-black/60 z-[60] hidden backdrop-blur-sm items-center justify-center p-4">
+    <div class="bg-white rounded-3xl shadow-2xl w-full max-w-2xl max-h-[90vh] flex flex-col overflow-hidden">
+      <div class="flex items-center justify-between p-6 border-b border-gray-100 flex-shrink-0">
+        <h3 class="font-playfair text-xl font-bold text-gray-900"><i class="fas fa-box text-rose-400 mr-2"></i>Pesanan Saya</h3>
+        <button onclick="closeOrderHistory()" class="p-2 rounded-full hover:bg-rose-50 text-gray-400 hover:text-rose-500 transition-colors">
+          <i class="fas fa-times text-lg"></i>
+        </button>
+      </div>
+      <!-- List pesanan -->
+      <div id="orderHistoryList" class="flex-1 overflow-y-auto p-6 space-y-3">
+        <div class="text-center py-12 text-gray-300">
+          <i class="fas fa-spinner fa-spin text-3xl mb-3"></i>
+          <p class="text-sm">Memuat pesanan...</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ <!-- ======== ORDER DETAIL USER MODAL ======== -->
+<div id="orderDetailUserOverlay" class="fixed inset-0 bg-black/60 z-[70] hidden backdrop-blur-sm items-center justify-center p-4">
+  <div class="bg-white rounded-3xl shadow-2xl w-full max-w-lg max-h-[90vh] flex flex-col overflow-hidden">
+
+    <div class="flex items-center justify-between p-5 border-b border-gray-100 flex-shrink-0">
+      <h3 class="font-playfair text-lg font-bold text-gray-900">
+        Detail Pesanan
+      </h3>
+
+      <button
+        type="button"
+        onclick="
+          document.getElementById('orderDetailUserOverlay').classList.add('hidden');
+          document.getElementById('orderDetailUserOverlay').classList.remove('flex');
+          document.body.style.overflow = '';
+        "
+        class="p-2 rounded-full hover:bg-rose-50 text-gray-400 hover:text-rose-500 transition-colors">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+
+    <div id="orderDetailUserContent" class="flex-1 overflow-y-auto p-5"></div>
+
+  </div>
+</div>
+
+  <!-- ======== CART SIDEBAR ======== -->
+  <div id="cartOverlay" class="fixed inset-0 bg-black/50 z-50 hidden backdrop-blur-sm"></div>
+  <div id="cartSidebar" class="fixed top-0 right-0 h-full w-full sm:w-96 bg-white z-50 shadow-2xl transform translate-x-full transition-transform duration-300 flex flex-col">
+    <div class="flex items-center justify-between p-5 border-b border-gray-100">
+      <h3 class="font-playfair text-xl font-bold text-gray-800">Shopping Bag</h3>
+      <button id="closeCart" class="p-2 rounded-full hover:bg-rose-50 text-gray-400 hover:text-rose-500 transition-colors">
+        <i class="fas fa-times text-lg"></i>
+      </button>
+    </div>
+    <div id="cartItems" class="flex-1 overflow-y-auto p-5 space-y-4">
+      <div class="text-center py-16">
+        <div class="text-6xl mb-4">🛍️</div>
+        <p class="text-gray-400 text-sm font-medium">Keranjangmu masih kosong</p>
+        <p class="text-gray-300 text-xs mt-1">Yuk tambahkan produk favoritmu!</p>
+      </div>
+    </div>
+    <div id="cartFooter" class="hidden p-5 border-t border-gray-100 bg-gray-50">
+      <!-- Pilih semua -->
+      <div class="flex items-center justify-between mb-3">
+        <label class="flex items-center gap-2 cursor-pointer select-none">
+          <input type="checkbox" id="selectAllCart" onchange="toggleSelectAll(this.checked)"
+            class="w-4 h-4 rounded accent-rose-500 cursor-pointer" />
+          <span class="text-xs font-semibold text-gray-600">Pilih Semua</span>
+        </label>
+        <span id="selectedCount" class="text-xs text-rose-500 font-semibold"></span>
+      </div>
+      <div class="flex justify-between items-center mb-4">
+        <span class="text-gray-600 font-medium text-sm">Total Dipilih:</span>
+        <span id="cartTotal" class="font-playfair text-xl font-bold text-rose-600">Rp 0</span>
+      </div>
+      <button onclick="openCheckoutModal()"
+        class="w-full btn-primary py-4 rounded-full text-white font-semibold text-sm shadow-md">
+        <i class="fas fa-lock mr-2"></i>Checkout Sekarang
+      </button>
+    </div>
+  </div>
+
+  <!-- ======== AUTH MODAL ======== -->
+  <div id="authOverlay" class="fixed inset-0 bg-black/60 z-[60] hidden backdrop-blur-sm items-center justify-center p-4">
+    <div class="bg-white rounded-3xl shadow-2xl w-full max-w-md overflow-hidden">
+      <!-- Tabs -->
+      <div class="flex border-b border-gray-100">
+        <button id="tabLogin" onclick="switchAuthTab('login')"
+          class="auth-tab-active flex-1 py-4 text-sm font-semibold transition-all">
+          Masuk
+        </button>
+        <button id="tabRegister" onclick="switchAuthTab('register')"
+          class="flex-1 py-4 text-sm font-semibold text-gray-400 hover:text-rose-500 transition-all">
+          Daftar
+        </button>
+        <button onclick="closeAuthModal()" class="px-5 text-gray-300 hover:text-rose-400 transition-colors">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+
+      <!-- Login Form -->
+      <form id="loginForm" onsubmit="doLogin(event)" class="p-8">
+        <div class="text-center mb-6">
+          <div class="text-4xl mb-2">🌸</div>
+          <h2 class="font-playfair text-2xl font-bold text-gray-900">Selamat Datang!</h2>
+          <p class="text-gray-400 text-sm mt-1">Masuk ke akun Fidéa Glow &amp; Co kamu</p>
+        </div>
+        <div class="space-y-4">
+          <div>
+            <label class="block text-xs font-semibold text-gray-600 mb-1.5">Email</label>
+            <input id="loginEmail" type="email" placeholder="email@kamu.com" required
+              class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-rose-300 text-sm" />
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-gray-600 mb-1.5">Password</label>
+            <input id="loginPassword" type="password" placeholder="••••••••" required
+              class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-rose-300 text-sm" />
+          </div>
+          <p id="loginError" class="auth-error text-xs text-red-500 -mt-2"></p>
+          <button type="submit" class="w-full btn-primary py-3.5 rounded-full text-white font-semibold text-sm">
+            Masuk
+          </button>
+        </div>
+      </form>
+
+      <!-- Register Form -->
+      <form id="registerForm" onsubmit="doRegister(event)" class="px-8 pb-6 pt-4 hidden">
+        <div class="text-center mb-4">
+          <div class="text-3xl mb-1">✨</div>
+          <h2 class="font-playfair text-xl font-bold text-gray-900">Buat Akun</h2>
+          <p class="text-gray-400 text-xs mt-0.5">Bergabung dengan komunitas Fidéa Glow &amp; Co</p>
+        </div>
+        <div class="space-y-3">
+          <div>
+            <label class="block text-xs font-semibold text-gray-600 mb-1">Nama Lengkap</label>
+            <input id="regName" type="text" placeholder="Nama kamu" required
+              class="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-rose-300 text-sm" />
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-gray-600 mb-1">Email</label>
+            <input id="regEmail" type="email" placeholder="email@kamu.com" required
+              class="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-rose-300 text-sm" />
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-gray-600 mb-1">Password</label>
+            <input id="regPassword" type="password" placeholder="Min. 6 karakter" required
+              class="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-rose-300 text-sm" />
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-gray-600 mb-1">Konfirmasi Password</label>
+            <input id="regConfirm" type="password" placeholder="Ulangi password" required
+              class="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-rose-300 text-sm" />
+          </div>
+          <p id="registerError" class="auth-error text-xs text-red-500"></p>
+          <button type="submit" class="w-full btn-primary py-3 rounded-full text-white font-semibold text-sm">
+            Buat Akun
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ======== CHECKOUT MODAL ======== -->
+  <div id="checkoutOverlay" class="fixed inset-0 bg-black/60 z-[60] hidden backdrop-blur-sm items-center justify-center p-4">
+    <div class="bg-white rounded-3xl shadow-2xl w-full max-w-2xl max-h-[90vh] overflow-y-auto">
+      <div class="flex items-center justify-between p-6 border-b border-gray-100 sticky top-0 bg-white z-10 rounded-t-3xl">
+        <h3 class="font-playfair text-xl font-bold text-gray-900"><i class="fas fa-lock text-rose-400 mr-2"></i>Checkout</h3>
+        <button onclick="closeCheckoutModal()" class="p-2 rounded-full hover:bg-rose-50 text-gray-400 hover:text-rose-500 transition-colors">
+          <i class="fas fa-times text-lg"></i>
+        </button>
+      </div>
+      <div class="p-6 grid md:grid-cols-2 gap-6">
+
+        <!-- Kolom kiri: form + kurir -->
+        <div class="space-y-4">
+          <h4 class="font-semibold text-gray-800 text-sm">📦 Informasi Pengiriman</h4>
+          <div>
+            <label class="block text-xs font-semibold text-gray-600 mb-1">Nama Penerima</label>
+            <input id="ckName" type="text" placeholder="Nama lengkap"
+              class="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-rose-300 text-sm" />
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-gray-600 mb-1">No. Telepon</label>
+            <input id="ckPhone" type="tel" placeholder="08xxxxxxxxxx"
+              class="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-rose-300 text-sm" />
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-gray-600 mb-1">Alamat Lengkap</label>
+            <textarea id="ckAddress" rows="3" placeholder="Jl. ..., Kota, Provinsi, Kode Pos"
+              class="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-rose-300 text-sm resize-none"></textarea>
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-gray-600 mb-1">Metode Pembayaran</label>
+            <select id="ckPayment" class="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-rose-300 text-sm bg-white">
+              <option value="transfer">🏦 Transfer Bank</option>
+              <option value="cod">🏠 Bayar di Tempat (COD)</option>
+              <option value="qris">🔳 QRIS</option>
+            </select>
+            <div id="transferInfoBox" class="hidden mt-3 bg-blue-50 rounded-xl p-4">
+
+  <p class="text-xs font-semibold text-blue-600 mb-2">
+    🏦 Transfer Bank
+  </p>
+
+  <label class="block text-xs font-semibold text-gray-600 mb-1">
+    Pilih Bank
+  </label>
+
+  <select id="transferBank"
+    class="w-full px-3 py-2.5 rounded-xl border border-gray-200 bg-white text-sm">
+
+    <option value="">-- Pilih Bank --</option>
+    <option value="bca">BCA</option>
+    <option value="bni">BNI</option>
+    <option value="bri">BRI</option>
+    <option value="mandiri">Mandiri</option>
+    <option value="cimb">CIMB Niaga</option>
+
+  </select>
+
+  <div id="vaInfo" class="hidden mt-3 bg-white rounded-xl p-3">
+
+    <p id="vaBankName" class="text-xs text-gray-500"></p>
+
+    <p id="vaNumber"
+       class="font-bold text-gray-800 tracking-wider mt-1">
+    </p>
+
+    <button
+      type="button"
+      onclick="copyVANumber()"
+      class="text-xs text-blue-500 font-semibold mt-2">
+      Salin Nomor VA
+    </button>
+
+  </div>
+
+</div>
+            <div id="qrisPaymentBox" class="hidden mt-3 bg-rose-50 rounded-2xl p-4 text-center">
+  <p class="font-semibold text-gray-800 text-sm mb-2">
+    Pembayaran QRIS
+  </p>
+
+  <p class="text-xs text-gray-500 mb-3">
+    Scan QRIS berikut untuk melakukan pembayaran.
+  </p>
+
+  <div class="bg-white rounded-xl p-3 inline-block">
+    <img
+      src="qris.jpg"
+      alt="QRIS Pembayaran"
+      class="w-48 h-48 object-contain">
+  </div>
+
+  <p class="text-xs text-gray-400 mt-3">
+    Setelah pembayaran, simpan bukti pembayaran.
+  </p>
+</div>
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-gray-600 mb-1">Catatan (opsional)</label>
+            <input id="ckNotes" type="text" placeholder="Catatan untuk penjual..."
+              class="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-rose-300 text-sm" />
+          </div>
+
+          <!-- Pilihan Kurir -->
+          <div>
+            <label class="block text-xs font-semibold text-gray-600 mb-2">🚚 Pilih Kurir Pengiriman</label>
+            <div id="shippingOptions" class="max-h-64 overflow-y-auto pr-1 space-y-1">
+              <!-- Diisi oleh JS -->
+              <div class="flex items-center gap-2 py-4 text-gray-400 text-sm">
+                <i class="fas fa-spinner fa-spin"></i> Memuat pilihan kurir...
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kolom kanan: ringkasan -->
+        <div class="flex flex-col">
+          <h4 class="font-semibold text-gray-800 text-sm mb-3">🛍️ Ringkasan Pesanan</h4>
+          <div id="ckItems" class="space-y-2 mb-4 max-h-44 overflow-y-auto flex-shrink-0"></div>
+
+          <div class="border-t border-gray-100 pt-4 space-y-2 mt-auto">
+            <div class="flex justify-between text-sm text-gray-500">
+              <span>Subtotal</span>
+              <span id="ckSubtotal">Rp 0</span>
+            </div>
+            <div class="flex justify-between text-sm">
+              <span class="text-gray-500">Ongkos Kirim</span>
+              <span id="ckShipping" class="text-gray-500 text-right max-w-[55%] leading-snug">Pilih kurir</span>
+            </div>
+            <!-- Promo Code -->
+            <div class="pt-1">
+              <div class="flex gap-2">
+                <input id="ckPromoInput" type="text" placeholder="Kode promo (opsional)"
+                  class="flex-1 px-3 py-2 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-rose-300 text-xs uppercase tracking-wider" />
+                <button onclick="applyPromo()" id="ckPromoBtn"
+                  class="px-3 py-2 bg-rose-50 hover:bg-rose-100 text-rose-600 text-xs font-semibold rounded-xl transition-all border border-rose-100 whitespace-nowrap">
+                  Gunakan
+                </button>
+              </div>
+              <p id="ckPromoMsg" class="text-xs mt-1 hidden"></p>
+            </div>
+            <div id="ckDiscountRow" class="flex justify-between text-sm text-emerald-600 hidden">
+              <span>Diskon (<span id="ckPromoLabel"></span>)</span>
+              <span id="ckDiscount">- Rp 0</span>
+            </div>
+            <div class="flex justify-between font-bold text-base text-gray-900 border-t border-gray-100 pt-3">
+              <span>Total</span>
+              <span id="ckTotal" class="text-rose-600">Rp 0</span>
+            </div>
+          </div>
+          <button id="ckSubmitBtn" onclick="submitOrder()"
+            class="w-full btn-primary py-4 rounded-full text-white font-semibold text-sm mt-5 shadow-md">
+            <i class="fas fa-lock mr-2"></i>Buat Pesanan
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ======== ORDER SUCCESS MODAL ======== -->
+  <div id="successOverlay" class="fixed inset-0 bg-black/60 z-[70] hidden backdrop-blur-sm items-center justify-center p-4">
+    <div class="bg-white rounded-3xl shadow-2xl w-full max-w-sm text-center p-10">
+      <div class="text-7xl mb-4">🎉</div>
+      <h2 class="font-playfair text-2xl font-bold text-gray-900 mb-2">Pesanan Berhasil!</h2>
+      <p class="text-gray-400 text-sm mb-6">Terima kasih telah berbelanja di Fidéa Glow &amp; Co ✨</p>
+      <div class="bg-rose-50 rounded-2xl p-4 mb-4">
+        <p class="text-xs text-gray-500 mb-1">Kode Pesanan</p>
+        <p id="successOrderCode" class="font-playfair text-xl font-bold text-rose-600"></p>
+        <p class="text-xs text-gray-500 mt-2">Total Pembayaran</p>
+        <p id="successTotal" class="font-bold text-gray-900 text-lg"></p>
+      </div>
+      <div id="successShipping" class="bg-blue-50 rounded-2xl p-4 mb-4 text-left hidden">
+        <p class="text-xs font-semibold text-blue-600 mb-1">🚚 Kurir Pengiriman</p>
+        <p id="successCourier" class="text-sm font-bold text-gray-900"></p>
+        <p id="successEstimate" class="text-xs text-gray-500 mt-0.5"></p>
+      </div>
+
+      <!-- Reminder upload bukti — hanya untuk non-COD -->
+      <div id="successProofReminder" class="hidden bg-amber-50 border border-amber-200 rounded-2xl p-4 mb-4 text-left">
+        <div class="flex items-start gap-3">
+          <div class="w-8 h-8 rounded-full bg-amber-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+            <i class="fas fa-camera text-amber-500 text-sm"></i>
+          </div>
+          <div class="flex-1 min-w-0">
+            <p class="text-sm font-bold text-amber-800">Upload Bukti Pembayaran</p>
+            <p class="text-xs text-amber-600 mt-0.5 leading-relaxed">
+              Segera upload bukti transfer agar pesanan lebih cepat diproses oleh admin.
+            </p>
+            <button id="successUploadBtn"
+              onclick="closeSuccessModal(); setTimeout(() => { openOrderHistory(); }, 300);"
+              class="mt-2.5 px-4 py-1.5 bg-amber-500 hover:bg-amber-600 text-white text-xs font-semibold rounded-full transition-all">
+              <i class="fas fa-upload mr-1.5"></i>Upload Sekarang
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <p class="text-xs text-gray-400 mb-4">Simpan kode pesananmu untuk melacak status pengiriman.</p>
+      <button onclick="closeSuccessModal(); openOrderHistory();"
+        class="w-full py-3 rounded-full border-2 border-rose-400 text-rose-500 font-semibold hover:bg-rose-50 transition-all text-sm">
+        <i class="fas fa-receipt mr-2"></i>Lihat Pesanan
+      </button>
+    </div>
+  </div>
+
+  <!-- ======== PRODUCT MODAL ======== -->
+  <div id="modalOverlay" class="fixed inset-0 bg-black/60 z-50 hidden backdrop-blur-sm items-center justify-center p-4">
+    <div id="modalBox" class="bg-white rounded-3xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto transform scale-95 transition-transform duration-300">
+      <!-- Filled by JS -->
+    </div>
+  </div>
+
+  <!-- ======== TOAST ======== -->
+  <div id="toast" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-[100] transform translate-y-24 transition-all duration-300 opacity-0 pointer-events-none">
+    <div class="bg-gray-900 text-white px-6 py-3 rounded-full shadow-xl text-sm font-medium flex items-center gap-2 whitespace-nowrap">
+      <i class="fas fa-check-circle text-green-400"></i>
+      <span id="toastMsg">Ditambahkan ke keranjang!</span>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

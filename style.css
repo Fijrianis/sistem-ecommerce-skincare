@@ -1,0 +1,460 @@
+/* ===========================
+   Fidéa Glow & Co - Custom Styles
+   =========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+* {
+  scroll-behavior: smooth;
+}
+
+/* ---- Text Gradient ---- */
+.text-gradient {
+  background: linear-gradient(135deg, #f43f5e, #fb923c, #f43f5e);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 3s linear infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+
+/* ---- Hero ---- */
+.hero-section {
+  background: linear-gradient(145deg, #fff1f2 0%, #fdf6f0 40%, #fce7f3 100%);
+  position: relative;
+}
+
+.hero-blob {
+  width: 420px;
+  height: 420px;
+  background: radial-gradient(circle at 40% 40%, #fecdd3 0%, #fda4af 40%, #fb7185 100%);
+  border-radius: 60% 40% 70% 30% / 50% 60% 40% 50%;
+  animation: morphBlob 8s ease-in-out infinite;
+  opacity: 0.25;
+  filter: blur(2px);
+}
+
+@keyframes morphBlob {
+  0%, 100% { border-radius: 60% 40% 70% 30% / 50% 60% 40% 50%; }
+  33% { border-radius: 40% 60% 30% 70% / 60% 40% 70% 30%; }
+  66% { border-radius: 70% 30% 50% 50% / 30% 70% 50% 50%; }
+}
+
+.hero-img {
+  width: 340px;
+  object-fit: cover;
+  height: 420px;
+  border-radius: 2rem;
+  box-shadow: 0 30px 60px rgba(244, 63, 94, 0.25);
+  transition: transform 0.3s ease;
+}
+
+.hero-img:hover {
+  transform: translateY(-6px);
+}
+
+/* ---- Floating Badges ---- */
+.float-badge {
+  animation: floatBadge 3s ease-in-out infinite;
+}
+
+.badge-1 { animation-delay: 0s; }
+.badge-2 { animation-delay: 1.5s; }
+
+@keyframes floatBadge {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+/* ---- Buttons ---- */
+.btn-primary {
+  background: linear-gradient(135deg, #f43f5e, #fb7185);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #e11d48, #f43f5e);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(244, 63, 94, 0.4);
+}
+
+/* ---- Pill Tag ---- */
+.pill-tag {
+  display: inline-block;
+  background: linear-gradient(135deg, #fce7f3, #ffe4e6);
+  color: #e11d48;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.35rem 1rem;
+  border-radius: 999px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* ---- Filter Buttons ---- */
+.filter-btn {
+  padding: 0.6rem 1.3rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border: 1.5px solid #fecdd3;
+  background: white;
+  color: #9ca3af;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+}
+
+.filter-btn:hover {
+  border-color: #f43f5e;
+  color: #f43f5e;
+  background: #fff1f2;
+}
+
+.filter-btn.active {
+  background: linear-gradient(135deg, #f43f5e, #fb7185);
+  border-color: transparent;
+  color: white;
+  box-shadow: 0 6px 20px rgba(244, 63, 94, 0.3);
+}
+
+/* ---- Product Card ---- */
+.product-card {
+  background: white;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  cursor: pointer;
+  position: relative;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(244, 63, 94, 0.15);
+}
+
+.product-card-img-wrap {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #fff1f2, #fce7f3);
+  aspect-ratio: 1 / 1;
+}
+
+.product-card-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.product-card:hover .product-card-img-wrap img {
+  transform: scale(1.08);
+}
+
+.product-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.3), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 1rem;
+}
+
+.product-card:hover .product-card-overlay {
+  opacity: 1;
+}
+
+.quick-view-btn {
+  background: white;
+  color: #f43f5e;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.5rem 1.2rem;
+  border-radius: 999px;
+  transform: translateY(10px);
+  transition: transform 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.product-card:hover .quick-view-btn {
+  transform: translateY(0);
+}
+
+.product-card-body {
+  padding: 0.85rem;
+}
+
+.product-badge {
+  position: absolute;
+  top: 0.6rem;
+  left: 0.6rem;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  z-index: 5;
+}
+
+.badge-new {
+  background: #10b981;
+  color: white;
+}
+
+.badge-hot {
+  background: linear-gradient(135deg, #f43f5e, #fb923c);
+  color: white;
+}
+
+.badge-sale {
+  background: #8b5cf6;
+  color: white;
+}
+
+.badge-bestseller {
+  background: #f59e0b;
+  color: white;
+}
+
+.wishlist-btn {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.6rem;
+  width: 32px;
+  height: 32px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: all 0.2s ease;
+}
+
+.wishlist-btn:hover,
+.wishlist-btn.active {
+  background: #fff1f2;
+  color: #f43f5e;
+  transform: scale(1.1);
+}
+
+.add-cart-btn {
+  width: 100%;
+  padding: 0.6rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border: 1.5px solid #fecdd3;
+  background: white;
+  color: #f43f5e;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  margin-top: 0.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+.add-cart-btn:hover {
+  background: linear-gradient(135deg, #f43f5e, #fb7185);
+  border-color: transparent;
+  color: white;
+  box-shadow: 0 6px 20px rgba(244,63,94,0.3);
+}
+
+/* ---- Stars ---- */
+.stars {
+  display: inline-flex;
+  gap: 1px;
+}
+
+/* ---- Feature Card ---- */
+.feature-card {
+  transition: all 0.3s ease;
+  border: 1px solid #f9e4ec;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(244, 63, 94, 0.1);
+  border-color: #fecdd3;
+}
+
+/* ---- Promo Banner ---- */
+.promo-banner {
+  background: linear-gradient(135deg, #f43f5e 0%, #e11d48 40%, #9f1239 100%);
+  position: relative;
+}
+
+.promo-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle at 20% 50%, rgba(255,255,255,0.08) 0%, transparent 50%),
+                    radial-gradient(circle at 80% 20%, rgba(255,255,255,0.06) 0%, transparent 40%);
+}
+
+/* ---- Footer ---- */
+.footer-bg {
+  background: linear-gradient(160deg, #1f1f2e 0%, #2d1b3d 50%, #1a1a2e 100%);
+}
+
+/* ---- Cart Sidebar ---- */
+#cartSidebar.open {
+  transform: translateX(0);
+}
+
+.cart-item {
+  display: flex;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  background: #fdf6f0;
+  border-radius: 1rem;
+  align-items: center;
+  transition: opacity 0.2s ease;
+}
+
+.cart-item-img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 0.75rem;
+  flex-shrink: 0;
+}
+
+/* Checkbox styling */
+.cart-item input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  accent-color: #f43f5e;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+/* Select all row */
+#selectAllCart {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  accent-color: #f43f5e;
+  cursor: pointer;
+}
+
+/* ---- Modal ---- */
+#modalOverlay.flex {
+  display: flex;
+}
+
+#modalBox.scale-100 {
+  transform: scale(1);
+}
+
+/* ---- Toast ---- */
+#toast.show {
+  transform: translateY(0) translateX(-50%);
+  opacity: 1;
+}
+
+/* ---- Scroll animation ---- */
+.fade-in {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: all 0.5s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---- Wave ---- */
+.wave-bottom {
+  line-height: 0;
+}
+
+/* ---- Scrollbar ---- */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #fdf6f0;
+}
+::-webkit-scrollbar-thumb {
+  background: #fda4af;
+  border-radius: 999px;
+}
+
+/* ---- Responsive card text ---- */
+@media (max-width: 640px) {
+  .product-card-body {
+    padding: 0.65rem;
+  }
+}
+
+/* ---- Auth Tabs ---- */
+.auth-tab-active {
+  color: #f43f5e;
+  border-bottom: 2px solid #f43f5e;
+}
+
+/* ---- Checkout & Auth overlay ---- */
+#authOverlay.flex,
+#checkoutOverlay.flex,
+#successOverlay.flex {
+  display: flex;
+}
+
+/* ---- User Dropdown animation ---- */
+#userDropdown {
+  animation: fadeDown 0.15s ease;
+}
+
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ---- Voucher popup animation ---- */
+@keyframes bounceIn {
+  0%   { opacity: 0; transform: scale(0.8); }
+  60%  { transform: scale(1.05); }
+  100% { opacity: 1; transform: scale(1); }
+}
+.animate-bounce-in {
+  animation: bounceIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ---- Shipping Options ---- */
+.shipping-option {
+  transition: all 0.2s ease;
+}
+
+.shipping-option:has(input:checked),
+.shipping-option.selected {
+  border-color: #f43f5e !important;
+  background: #fff1f2 !important;
+}
+
+/* Scrollbar kurir */
+#shippingOptions::-webkit-scrollbar { width: 4px; }
+#shippingOptions::-webkit-scrollbar-thumb { background: #fda4af; border-radius: 999px; }

@@ -1,0 +1,211 @@
+/* ===================================================
+   Fidéa Glow & Co — Admin Panel CSS
+   Warna: Rose/Pink (brand homepage)
+   =================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+*, *::before, *::after { box-sizing: border-box; scroll-behavior: smooth; }
+
+body { font-family: 'Inter', sans-serif; }
+
+/* ====================================================
+   SIDEBAR — warna rose gelap sesuai brand
+   ==================================================== */
+/* ====================================================
+   SIDEBAR — Pink Nude Cream (Light) | Auto gelap (Dark)
+   ==================================================== */
+.sidebar {
+  background: linear-gradient(175deg, #f5e6ea 0%, #eedde2 50%, #f5e6ea 100%) !important;
+  border-right: 1px solid #e8c8d2 !important;
+  box-shadow: 4px 0 20px rgba(180,80,100,0.08) !important;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: #a0556a;
+  transition: all 0.18s ease;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  text-decoration: none;
+  margin-bottom: 2px;
+  width: 100%;
+  text-align: left;
+}
+.nav-item:hover {
+  background: rgba(244,63,94,0.1);
+  color: #c0304a;
+  padding-left: 18px;
+}
+.nav-item.active {
+  background: rgba(244,63,94,0.12);
+  color: #c0304a;
+  border-left: 3px solid #f43f5e;
+  padding-left: 11px;
+  font-weight: 700;
+}
+
+/* Dark mode sidebar */
+.sidebar.dark-sb {
+  background: linear-gradient(175deg, #2a0c14 0%, #3d1020 50%, #2a0c14 100%) !important;
+  border-right-color: rgba(244,63,94,0.2) !important;
+  box-shadow: 4px 0 20px rgba(244,63,94,0.1) !important;
+}
+.sidebar.dark-sb .nav-item { color: rgba(253,164,175,0.65); }
+.sidebar.dark-sb .nav-item:hover { background: rgba(255,255,255,0.07); color: #fff1f2; }
+.sidebar.dark-sb .nav-item.active { background: rgba(244,63,94,0.2); color: #fda4af; border-left-color: #f43f5e; }
+
+/* ====================================================
+   TOGGLE SWITCH
+   ==================================================== */
+.theme-track {
+  width: 44px;
+  height: 24px;
+  border-radius: 999px;
+  position: relative;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  background: rgba(244,63,94,0.25);
+  border: 1.5px solid rgba(244,63,94,0.4);
+  flex-shrink: 0;
+  display: inline-block;
+}
+.theme-track.is-dark {
+  background: #f43f5e;
+  border-color: #f43f5e;
+}
+.theme-thumb {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 16px;
+  height: 16px;
+  background: white;
+  border-radius: 50%;
+  transition: transform 0.28s cubic-bezier(.4,0,.2,1);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+  pointer-events: none;
+}
+.theme-track.is-dark .theme-thumb {
+  transform: translateX(20px);
+}
+
+/* ====================================================
+   STAT CARDS
+   ==================================================== */
+.stat-card {
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+.stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(244,63,94,0.1) !important;
+}
+.stat-card::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #f43f5e, #fb7185);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.stat-card:hover::after { opacity: 1; }
+
+/* ====================================================
+   STATUS BADGES
+   ==================================================== */
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+}
+.status-pending    { background:#fefce8; color:#854d0e; border-color:#fde047; }
+.status-processing { background:#eff6ff; color:#1d4ed8; border-color:#93c5fd; }
+.status-shipped    { background:#f5f3ff; color:#6d28d9; border-color:#c4b5fd; }
+.status-delivered  { background:#f0fdf4; color:#166534; border-color:#86efac; }
+.status-cancelled  { background:#fff1f2; color:#be123c; border-color:#fda4af; }
+
+/* ====================================================
+   TABLE
+   ==================================================== */
+tbody tr { transition: background 0.12s ease; }
+tbody tr:hover { background: #fff5f7 !important; box-shadow: inset 3px 0 0 #f43f5e; }
+
+/* ====================================================
+   FORM INPUTS
+   ==================================================== */
+.form-label {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #6b2d3e;
+  margin-bottom: 6px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.form-input {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1.5px solid #f0c5d0;
+  border-radius: 10px;
+  font-size: 0.875rem;
+  font-family: 'Inter', sans-serif;
+  outline: none;
+  transition: all 0.2s;
+  background: #fff;
+  color: #1a0a10;
+}
+.form-input:focus {
+  border-color: #f43f5e;
+  box-shadow: 0 0 0 3px rgba(244,63,94,0.12);
+}
+.form-input::placeholder { color: #c4a0a8; }
+
+/* ====================================================
+   TOAST
+   ==================================================== */
+#adminToast { transition: all 0.3s cubic-bezier(.4,0,.2,1) !important; }
+#adminToast.show { transform: translateY(0) !important; opacity: 1 !important; pointer-events: auto !important; }
+#adminToast > div {
+  background: linear-gradient(135deg, #3b0d1a, #5a1628) !important;
+  border: 1px solid rgba(244,63,94,0.3) !important;
+  box-shadow: 0 8px 32px rgba(244,63,94,0.2) !important;
+}
+
+/* ====================================================
+   MODAL OVERLAY
+   ==================================================== */
+#orderDetailOverlay.flex,
+#productModalOverlay.flex,
+#promoModalOverlay.flex,
+#shippingModalOverlay.flex { display: flex; }
+
+/* ====================================================
+   MISC
+   ==================================================== */
+.stock-low { color:#dc2626; font-weight:700; background:#fee2e2; padding:2px 8px; border-radius:6px; font-size:.8rem; }
+.page { animation: fadeUp .2s ease; }
+@keyframes fadeUp { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } }
+
+::-webkit-scrollbar { width:5px; height:5px; }
+::-webkit-scrollbar-track { background: #fdf6f0; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg,#f43f5e,#fb7185); border-radius:999px; }
+
+@media (max-width: 768px) {
+  .sidebar { transform: translateX(-100%); }
+  .sidebar.open { transform: translateX(0); z-index: 40; }
+  #mainContent { margin-left: 0 !important; }
+}
